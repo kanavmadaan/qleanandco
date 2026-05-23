@@ -1,0 +1,3147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qlean and Co | Trusted Home, Move-Out & Commercial Cleaning</title>
+  <meta name="description"
+    content="Trusted residential, deep, move-out, retail and commercial cleaning services. Request a fast quote for homes, apartments, rental turnovers, stores, offices and heavy-duty cleanup jobs." />
+  <style>
+    :root {
+      --bg: #f7fbf5;
+      --bg-soft: #eef7ea;
+      --surface: rgba(255, 255, 255, 0.78);
+      --surface-strong: #ffffff;
+      --surface-dark: #102518;
+      --text: #17311f;
+      --text-soft: #5f6f62;
+      --line: rgba(23, 49, 31, 0.1);
+      --primary: #2f8f4e;
+      --primary-2: #67c777;
+      --accent: #c8a24a;
+      --accent-2: #d4b15a;
+      --success: #2f8f4e;
+      --shadow-lg: 0 28px 70px rgba(17, 38, 73, 0.14);
+      --shadow-md: 0 18px 40px rgba(17, 38, 73, 0.1);
+      --shadow-sm: 0 10px 24px rgba(17, 38, 73, 0.08);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --container: 1180px;
+      --nav-h: 84px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body,
+    html {
+      overflow-x: clip;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(103, 199, 119, 0.16), transparent 25%),
+        radial-gradient(circle at 90% 15%, rgba(200, 162, 74, 0.14), transparent 28%),
+        linear-gradient(180deg, #fbfdf8 0%, #f2f8ec 42%, #fffdf7 100%);
+      line-height: 1.55;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    input,
+    select,
+    textarea {
+      appearance: none;
+    }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--container));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 72px 0;
+      position: relative;
+    }
+
+    .section-head {
+      max-width: 700px;
+      margin-bottom: 26px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(26, 124, 255, 0.12);
+      color: #2763c7;
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      box-shadow: var(--shadow-sm);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .eyebrow .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      box-shadow: 0 0 0 6px rgba(26, 124, 255, 0.12);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(2.7rem, 6vw, 5.1rem);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+      max-width: 10.5ch;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      margin-top: 14px;
+    }
+
+    h3 {
+      font-size: 1.18rem;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    p.lead {
+      font-size: clamp(1.02rem, 2vw, 1.2rem);
+      color: var(--text-soft);
+      max-width: 60ch;
+      margin-top: 14px;
+    }
+
+    .muted {
+      color: var(--text-soft);
+    }
+
+    .soft {
+      color: #70809e;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 0 20px;
+      border-radius: 16px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease, border-color 0.22s ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+      outline: none;
+    }
+
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--text);
+      border-color: rgba(16, 33, 62, 0.08);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      padding-top: 14px;
+    }
+
+    .nav {
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 0 18px;
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 24px;
+      box-shadow: var(--shadow-sm);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      box-shadow: 0 14px 22px rgba(26, 124, 255, 0.22);
+      flex: 0 0 auto;
+    }
+
+    .brand-copy {
+      min-width: 0;
+    }
+
+    .brand-copy strong {
+      display: block;
+      font-size: 1rem;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    body,
+    body * {
+      max-width: 100%;
+    }
+
+    .card,
+    .point-chip,
+    .testimonial,
+    .quote-panel,
+    .contact-card,
+    .before-after,
+    .results-copy,
+    .why-panel,
+    .footer-shell {
+      overflow-wrap: anywhere;
+    }
+
+    .brand-copy span {
+      display: block;
+      color: var(--text-soft);
+      font-size: 0.82rem;
+      margin-top: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      color: #3b4c69;
+      font-size: 0.96rem;
+      font-weight: 600;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 100%;
+      bottom: -8px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      transition: right 0.22s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a:focus-visible::after {
+      right: 0;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 14px;
+      background: rgba(26, 124, 255, 0.08);
+      color: #245ebd;
+      font-weight: 700;
+    }
+
+    .menu-btn {
+      display: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 16px;
+      border: 1px solid rgba(16, 33, 62, 0.08);
+      background: rgba(255, 255, 255, 0.86);
+      padding: 0;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .menu-btn span,
+    .menu-btn::before,
+    .menu-btn::after {
+      content: "";
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--text);
+      transition: transform 0.22s ease, opacity 0.22s ease, top 0.22s ease;
+    }
+
+    .menu-btn::before {
+      top: 17px;
+    }
+
+    .menu-btn span {
+      top: 24px;
+    }
+
+    .menu-btn::after {
+      top: 31px;
+    }
+
+    .menu-btn[aria-expanded="true"]::before {
+      top: 24px;
+      transform: rotate(45deg);
+    }
+
+    .menu-btn[aria-expanded="true"] span {
+      opacity: 0;
+    }
+
+    .menu-btn[aria-expanded="true"]::after {
+      top: 24px;
+      transform: rotate(-45deg);
+    }
+
+    .mobile-panel {
+      display: none;
+      margin-top: 12px;
+      padding: 18px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .mobile-panel a {
+      display: block;
+      padding: 14px 4px;
+      border-bottom: 1px solid rgba(16, 33, 62, 0.08);
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .mobile-panel a:last-child {
+      border-bottom: 0;
+    }
+
+    .mobile-panel .btn-row {
+      margin-top: 14px;
+    }
+
+    .hero {
+      padding-top: 28px;
+      padding-bottom: 52px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-copy .eyebrow {
+      margin-bottom: 16px;
+    }
+
+    .hero-highlight {
+      background: linear-gradient(135deg, #17311f 0%, #2f8f4e 45%, #c8a24a 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+      max-width: 560px;
+    }
+
+    .point-chip {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      background: rgba(255, 255, 255, 0.72);
+      border-radius: 16px;
+      border: 1px solid rgba(16, 33, 62, 0.06);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .point-chip svg {
+      flex: 0 0 auto;
+    }
+
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+      color: #33506f;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .hero-trust span {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(16, 33, 62, 0.06);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 640px;
+    }
+
+    .hero-visual::before,
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(30px);
+      opacity: 0.7;
+    }
+
+    .hero-visual::before {
+      width: 240px;
+      height: 240px;
+      background: rgba(124, 77, 255, 0.2);
+      top: 30px;
+      right: -30px;
+    }
+
+    .hero-visual::after {
+      width: 300px;
+      height: 300px;
+      background: rgba(103, 199, 119, 0.18);
+      left: -30px;
+      bottom: 10px;
+    }
+
+    .visual-main {
+      position: absolute;
+      inset: 42px 0 0 42px;
+      overflow: hidden;
+      padding: 22px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.72)),
+        radial-gradient(circle at top right, rgba(103, 199, 119, 0.18), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(200, 162, 74, 0.16), transparent 32%);
+    }
+
+    .visual-photo {
+      height: 100%;
+      border-radius: 24px;
+      overflow: hidden;
+      position: relative;
+      background:
+        linear-gradient(180deg, rgba(10, 28, 54, 0.02), rgba(10, 28, 54, 0.18)),
+        linear-gradient(135deg, #e7f7ff 0%, #ffffff 45%, #eff4ff 100%);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.22);
+    }
+
+    .visual-photo::before {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 34%;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6)),
+        linear-gradient(90deg, #dceaf7 0%, #f9fcff 50%, #dceaf7 100%);
+    }
+
+    .window-grid {
+      position: absolute;
+      inset: 46px 40px auto 40px;
+      height: 210px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .window {
+      border-radius: 18px;
+      background: linear-gradient(180deg, #ddf4ff 0%, #ffffff 70%);
+      border: 8px solid rgba(255, 255, 255, 0.94);
+      box-shadow: inset 0 0 0 1px rgba(16, 33, 62, 0.05), 0 16px 26px rgba(36, 85, 129, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .window::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 75% 22%, rgba(255, 255, 255, 0.86), transparent 22%),
+        linear-gradient(180deg, rgba(32, 200, 255, 0.14), rgba(255, 255, 255, 0));
+    }
+
+    .kitchen-island {
+      position: absolute;
+      left: 12%;
+      right: 12%;
+      bottom: 18%;
+      height: 82px;
+      border-radius: 24px 24px 18px 18px;
+      background: linear-gradient(180deg, #fbfdff 0%, #d6e4f1 100%);
+      box-shadow: 0 26px 35px rgba(25, 47, 77, 0.1);
+    }
+
+    .kitchen-island::before {
+      content: "";
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      top: -12px;
+      height: 16px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #d4dde9, #ffffff, #d7e2ef);
+    }
+
+    .counter-objects,
+    .counter-objects::before,
+    .counter-objects::after {
+      position: absolute;
+      content: "";
+      bottom: 74px;
+      border-radius: 12px 12px 6px 6px;
+      background: linear-gradient(180deg, #61d0ff, #1a7cff);
+      box-shadow: 0 10px 18px rgba(26, 124, 255, 0.18);
+    }
+
+    .counter-objects {
+      left: 21%;
+      width: 34px;
+      height: 62px;
+    }
+
+    .counter-objects::before {
+      left: 68px;
+      width: 46px;
+      height: 46px;
+      background: linear-gradient(180deg, #ffd58a, #ff9f43);
+      box-shadow: 0 10px 18px rgba(255, 159, 67, 0.18);
+    }
+
+    .counter-objects::after {
+      left: 140px;
+      width: 26px;
+      height: 72px;
+      background: linear-gradient(180deg, #9ee6b5, #1db67d);
+      box-shadow: 0 10px 18px rgba(29, 182, 125, 0.18);
+    }
+
+    .visual-badge,
+    .visual-stats,
+    .visual-note {
+      position: absolute;
+      z-index: 3;
+    }
+
+    .visual-badge {
+      top: 0;
+      left: 0;
+      padding: 18px 20px;
+      width: 220px;
+    }
+
+    .visual-badge h3 {
+      margin-top: 10px;
+      font-size: 1.12rem;
+    }
+
+    .visual-badge p {
+      color: var(--text-soft);
+      font-size: 0.92rem;
+      margin-top: 10px;
+    }
+
+    .stars {
+      display: inline-flex;
+      gap: 4px;
+      color: var(--accent-2);
+      font-size: 0.98rem;
+    }
+
+    .visual-stats {
+      right: 0;
+      top: 80px;
+      width: 240px;
+      padding: 22px;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .stat-grid strong {
+      display: block;
+      font-size: 1.5rem;
+      letter-spacing: -0.04em;
+    }
+
+    .stat-grid span {
+      display: block;
+      color: var(--text-soft);
+      font-size: 0.86rem;
+      margin-top: 3px;
+    }
+
+    .visual-note {
+      left: 14px;
+      bottom: 26px;
+      width: 250px;
+      padding: 18px 18px 18px 74px;
+      min-height: 88px;
+    }
+
+    .visual-note .icon {
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(26, 124, 255, 0.14), rgba(124, 77, 255, 0.14));
+      display: grid;
+      place-items: center;
+    }
+
+    .hero-side-card {
+      position: absolute;
+      right: 22px;
+      bottom: 22px;
+      width: 260px;
+      padding: 20px;
+      background: rgba(15, 30, 55, 0.94);
+      color: #fff;
+      border-radius: 22px;
+      box-shadow: 0 26px 40px rgba(15, 30, 55, 0.22);
+    }
+
+    .hero-side-card p {
+      color: rgba(255, 255, 255, 0.76);
+      margin-top: 8px;
+    }
+
+    .hero-side-card .btn {
+      margin-top: 14px;
+      width: 100%;
+    }
+
+    .trust-strip {
+      padding-top: 0;
+    }
+
+    .trust-bar {
+      padding: 18px 22px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr 1fr;
+      gap: 18px;
+      align-items: center;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.66));
+    }
+
+    .trust-bar strong {
+      display: block;
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .trust-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(26, 124, 255, 0.12), rgba(124, 77, 255, 0.12));
+      flex: 0 0 auto;
+    }
+
+    .services-grid,
+    .why-grid,
+    .testimonial-grid,
+    .results-grid,
+    .footer-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .service-card {
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -10% -42% auto;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(26, 124, 255, 0.12), transparent 68%);
+      pointer-events: none;
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(26, 124, 255, 0.12), rgba(124, 77, 255, 0.12));
+      margin-bottom: 18px;
+    }
+
+    .service-card p {
+      color: var(--text-soft);
+      margin-top: 12px;
+      min-height: 76px;
+    }
+
+    .service-list {
+      margin: 16px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      color: #37506d;
+      font-size: 0.96rem;
+    }
+
+    .service-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .service-list li::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      flex: 0 0 auto;
+    }
+
+    .cta-band {
+      padding: 22px;
+      background:
+        linear-gradient(135deg, rgba(16, 37, 24, 0.97), rgba(47, 143, 78, 0.95) 55%, rgba(200, 162, 74, 0.92));
+      color: #fff;
+      display: grid;
+      grid-template-columns: 1.35fr auto;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .cta-band p {
+      color: rgba(255, 255, 255, 0.82);
+      margin-top: 8px;
+    }
+
+
+    .tight-cta.section {
+      padding-top: 18px;
+      padding-bottom: 16px;
+    }
+
+    .why-section.section {
+      padding-top: 22px;
+      padding-bottom: 56px;
+    }
+
+    .trust-strip.section {
+      padding-top: 0;
+      padding-bottom: 14px;
+    }
+
+    #services.section {
+      padding-top: 22px;
+      padding-bottom: 54px;
+    }
+
+    #services .section-head {
+      margin-bottom: 18px;
+    }
+
+    #results.section {
+      padding-top: 54px;
+      padding-bottom: 52px;
+    }
+
+    #results .btn-row {
+      margin-top: 18px;
+    }
+
+    #process.section {
+      padding-top: 22px;
+      padding-bottom: 50px;
+    }
+
+    #reviews.section {
+      padding-top: 22px;
+      padding-bottom: 30px;
+    }
+
+    #quote.section {
+      padding-top: 20px;
+    }
+
+    .why-grid {
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: stretch;
+    }
+
+    .why-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .why-card {
+      padding: 22px;
+    }
+
+    .why-card h3 {
+      margin-top: 14px;
+    }
+
+    .why-card p {
+      color: var(--text-soft);
+      margin-top: 10px;
+    }
+
+    .why-panel {
+      padding: 26px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.7)),
+        linear-gradient(135deg, rgba(32, 200, 255, 0.08), rgba(124, 77, 255, 0.06));
+    }
+
+    .assurance-list {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    .assurance-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: #334761;
+    }
+
+    .assurance-list li::before {
+      content: "✓";
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(29, 182, 125, 0.12);
+      color: var(--success);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      flex: 0 0 auto;
+      margin-top: 1px;
+    }
+
+    .results-grid {
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: stretch;
+    }
+
+    .before-after {
+      padding: 22px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .compare {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .compare-card {
+      border-radius: 22px;
+      overflow: hidden;
+      min-height: 320px;
+      position: relative;
+      border: 1px solid rgba(16, 33, 62, 0.06);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .compare-card .label {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      z-index: 2;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .compare-card.before {
+      background:
+        linear-gradient(180deg, rgba(18, 26, 42, 0.16), rgba(18, 26, 42, 0.3)),
+        linear-gradient(135deg, #d1d7df 0%, #eceff4 45%, #cfd7df 100%);
+    }
+
+    .compare-card.after {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.08)),
+        linear-gradient(135deg, #dff6ff 0%, #ffffff 48%, #edf2ff 100%);
+    }
+
+    .compare-card.before .label {
+      background: rgba(15, 30, 55, 0.88);
+      color: #fff;
+    }
+
+    .compare-card.after .label {
+      background: rgba(26, 124, 255, 0.1);
+      color: #1d5fcb;
+    }
+
+    .room {
+      position: absolute;
+      inset: 0;
+    }
+
+    .floor {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 32%;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(0, 0, 0, 0.08)), linear-gradient(90deg, #d6dde5 0%, #eef1f5 50%, #d4dce5 100%);
+    }
+
+    .after .floor {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(26, 124, 255, 0.04)), linear-gradient(90deg, #e2edf8 0%, #ffffff 50%, #dde9f8 100%);
+    }
+
+    .sofa,
+    .box,
+    .plant,
+    .lamp,
+    .sparkle,
+    .rug,
+    .trash {
+      position: absolute;
+      border-radius: 20px;
+    }
+
+    .sofa {
+      left: 14%;
+      bottom: 24%;
+      width: 52%;
+      height: 20%;
+      background: linear-gradient(180deg, #c8d0d8, #a7b1bc);
+      box-shadow: 0 18px 20px rgba(20, 25, 34, 0.14);
+    }
+
+    .after .sofa {
+      background: linear-gradient(180deg, #ffffff, #d7e8f8);
+      box-shadow: 0 18px 20px rgba(30, 77, 135, 0.1);
+    }
+
+    .sofa::before,
+    .sofa::after {
+      content: "";
+      position: absolute;
+      top: -22%;
+      width: 36%;
+      height: 44%;
+      border-radius: 16px;
+      background: inherit;
+    }
+
+    .sofa::before {
+      left: 8%;
+    }
+
+    .sofa::after {
+      right: 8%;
+    }
+
+    .rug {
+      left: 16%;
+      right: 12%;
+      bottom: 8%;
+      height: 10%;
+      background: rgba(15, 30, 55, 0.12);
+      filter: blur(0.5px);
+    }
+
+    .after .rug {
+      background: rgba(26, 124, 255, 0.12);
+    }
+
+    .box {
+      right: 14%;
+      bottom: 23%;
+      width: 16%;
+      height: 15%;
+      background: linear-gradient(180deg, #c6ad8f, #a88464);
+      box-shadow: 0 16px 18px rgba(43, 26, 12, 0.12);
+    }
+
+    .after .box {
+      background: linear-gradient(180deg, #ffe0b8, #ffbf7a);
+      box-shadow: 0 16px 18px rgba(255, 159, 67, 0.12);
+    }
+
+    .plant {
+      left: 8%;
+      bottom: 23%;
+      width: 11%;
+      height: 22%;
+      background: linear-gradient(180deg, #1db67d, #0c7f52);
+      clip-path: polygon(50% 0%, 70% 24%, 100% 18%, 82% 46%, 100% 72%, 64% 58%, 50% 100%, 36% 58%, 0% 72%, 18% 46%, 0% 18%, 30% 24%);
+    }
+
+    .lamp {
+      right: 8%;
+      bottom: 24%;
+      width: 6%;
+      height: 34%;
+      background: linear-gradient(180deg, #ffffff, #cedbeb);
+      border-radius: 999px;
+    }
+
+    .lamp::before {
+      content: "";
+      position: absolute;
+      left: -120%;
+      right: -120%;
+      top: 0;
+      height: 26%;
+      background: linear-gradient(180deg, #ffffff, #d9e2eb);
+      border-radius: 20px 20px 50% 50%;
+    }
+
+    .before .trash {
+      left: 44%;
+      bottom: 14%;
+      width: 8%;
+      height: 8%;
+      background: #7d8792;
+      border-radius: 50% 44% 48% 52%;
+      box-shadow: -95px 12px 0 -4px rgba(85, 94, 103, 0.7), 56px -6px 0 -2px rgba(92, 101, 110, 0.7), 110px 18px 0 -5px rgba(78, 88, 97, 0.7);
+    }
+
+    .after .sparkle,
+    .after .sparkle::before,
+    .after .sparkle::after {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background: linear-gradient(135deg, #20c8ff, #7c4dff);
+      clip-path: polygon(50% 0%, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0% 50%, 39% 39%);
+      filter: drop-shadow(0 10px 16px rgba(26, 124, 255, 0.22));
+    }
+
+    .after .sparkle {
+      top: 18%;
+      left: 18%;
+    }
+
+    .after .sparkle::before {
+      top: 56px;
+      left: 182px;
+      width: 12px;
+      height: 12px;
+    }
+
+    .after .sparkle::after {
+      top: 124px;
+      left: 36px;
+      width: 10px;
+      height: 10px;
+    }
+
+    .results-copy {
+      padding: 26px;
+    }
+
+    .metric-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .metric {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: center;
+      padding: 16px 18px;
+      background: rgba(255, 255, 255, 0.76);
+      border-radius: 18px;
+      border: 1px solid rgba(16, 33, 62, 0.06);
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 1.12rem;
+      letter-spacing: -0.02em;
+    }
+
+    .metric p {
+      color: var(--text-soft);
+      margin-top: 4px;
+      font-size: 0.95rem;
+    }
+
+    .process-wrap {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .step {
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .step-number {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      font-size: 1rem;
+      font-weight: 800;
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      box-shadow: 0 12px 20px rgba(26, 124, 255, 0.18);
+    }
+
+    .step p {
+      color: var(--text-soft);
+      margin-top: 14px;
+    }
+
+    .reviews-marquee {
+      --review-gap: 18px;
+      display: grid;
+      gap: 18px;
+      overflow: hidden;
+      position: relative;
+      mask-image: linear-gradient(90deg, transparent 0, rgba(0, 0, 0, 1) 8%, rgba(0, 0, 0, 1) 92%, transparent 100%);
+      -webkit-mask-image: linear-gradient(90deg, transparent 0, rgba(0, 0, 0, 1) 8%, rgba(0, 0, 0, 1) 92%, transparent 100%);
+    }
+
+    .marquee-row {
+      position: relative;
+      overflow: hidden;
+      padding: 6px 0 12px;
+    }
+
+    .marquee-row::before {
+      content: "";
+      position: absolute;
+      inset: auto 4% 0 4%;
+      height: 18px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(80, 140, 80, 0), rgba(131, 176, 105, 0.14), rgba(199, 168, 84, 0.14), rgba(80, 140, 80, 0));
+      filter: blur(8px);
+      pointer-events: none;
+      opacity: 0.8;
+      z-index: 0;
+    }
+
+    .marquee-row.left::after,
+    .marquee-row.right::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 120px;
+      height: 36px;
+      transform: translateY(-50%);
+      border-radius: 999px;
+      pointer-events: none;
+      opacity: 0.22;
+      filter: blur(10px);
+      z-index: 0;
+      background: linear-gradient(90deg, rgba(199, 168, 84, 0), rgba(199, 168, 84, 0.6), rgba(131, 176, 105, 0));
+      animation: sweep-glow-left 10s linear infinite;
+    }
+
+    .marquee-row.right::after {
+      animation-name: sweep-glow-right;
+    }
+
+    .marquee-track {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      gap: var(--review-gap);
+      width: max-content;
+      will-change: transform;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-duration: 72s;
+      align-items: stretch;
+    }
+
+    .marquee-row.reverse .marquee-track {
+      animation-duration: 78s;
+    }
+
+    .marquee-row.left .marquee-track {
+      animation-name: reviews-left;
+    }
+
+    .marquee-row.right .marquee-track {
+      animation-name: reviews-right;
+    }
+
+    .reviews-marquee:hover .marquee-track,
+    .reviews-marquee:focus-within .marquee-track {
+      animation-play-state: paused;
+    }
+
+    .testimonial {
+      width: 320px;
+      min-height: 240px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.78));
+      box-shadow: 0 12px 24px rgba(34, 58, 34, 0.08);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      flex: 0 0 auto;
+    }
+
+    .testimonial::after {
+      content: "";
+      position: absolute;
+      inset: auto -10% -35% auto;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, rgba(123, 175, 96, 0.14), rgba(199, 168, 84, 0.08), transparent 68%);
+      pointer-events: none;
+    }
+
+    .testimonial blockquote {
+      margin: 0;
+      font-size: 0.98rem;
+      color: #233653;
+      line-height: 1.6;
+    }
+
+    .testimonial footer {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: auto;
+    }
+
+    .review-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--text-soft);
+      font-size: 0.88rem;
+      margin-top: -2px;
+    }
+
+    .review-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(115, 160, 92, 0.1);
+      color: #4e6f33;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .review-tag::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      flex: 0 0 auto;
+    }
+
+    @keyframes reviews-left {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(calc(-50% - (var(--review-gap) / 2)));
+      }
+    }
+
+    @keyframes reviews-right {
+      from {
+        transform: translateX(calc(-50% - (var(--review-gap) / 2)));
+      }
+
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes sweep-glow-left {
+      from {
+        left: -12%;
+      }
+
+      to {
+        left: 100%;
+      }
+    }
+
+    @keyframes sweep-glow-right {
+      from {
+        right: -12%;
+      }
+
+      to {
+        right: 100%;
+      }
+    }
+
+    .avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      flex: 0 0 auto;
+    }
+
+    .quote-wrap {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .quote-panel {
+      padding: 26px;
+      background:
+        linear-gradient(180deg, rgba(16, 37, 24, 0.98), rgba(35, 80, 46, 0.94));
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quote-panel::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      right: -110px;
+      bottom: -130px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(32, 200, 255, 0.28), transparent 60%);
+    }
+
+    .quote-panel p,
+    .quote-panel li,
+    .quote-panel .muted {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .quote-panel ul {
+      list-style: none;
+      padding: 0;
+      margin: 26px 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    .quote-panel li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .quote-panel li::before {
+      content: "•";
+      color: #80dfff;
+      font-size: 1.4rem;
+      line-height: 1;
+      margin-top: -2px;
+    }
+
+    .contact-card {
+      padding: 22px;
+    }
+
+    form {
+      display: grid;
+      gap: 16px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    label {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #2e4562;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(16, 33, 62, 0.1);
+      border-radius: 16px;
+      background: #fff;
+      color: var(--text);
+      padding: 14px 16px;
+      min-height: 54px;
+      transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: rgba(26, 124, 255, 0.46);
+      box-shadow: 0 0 0 4px rgba(26, 124, 255, 0.1);
+    }
+
+    .form-note {
+      color: var(--text-soft);
+      font-size: 0.92rem;
+    }
+
+    .footer {
+      padding: 22px 0 120px;
+    }
+
+    .footer-shell {
+      padding: 34px 28px;
+      background: linear-gradient(180deg, rgba(14, 32, 20, 0.98), rgba(24, 49, 30, 0.96));
+      color: #fff;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1.25fr 0.75fr 0.75fr 0.9fr;
+      gap: 26px;
+    }
+
+    .footer h3,
+    .footer h4 {
+      letter-spacing: -0.02em;
+    }
+
+    .footer h4 {
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+
+    .footer p,
+    .footer li,
+    .footer a {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .service-area {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .service-area span {
+      display: inline-flex;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.92rem;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 28px;
+      padding-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .sticky-mobile-cta {
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      z-index: 40;
+      display: none;
+      gap: 10px;
+      padding: 10px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: 0 18px 32px rgba(13, 28, 51, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .sticky-mobile-cta a {
+      flex: 1;
+    }
+
+    .sticky-mobile-cta .btn {
+      width: 100%;
+      min-height: 50px;
+    }
+
+    section,
+    div,
+    article,
+    aside,
+    header,
+    footer,
+    nav {
+      min-width: 0;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 1120px) {
+
+      .hero-grid,
+      .why-grid,
+      .results-grid,
+      .quote-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid,
+      .testimonial-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .process-wrap {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .trust-bar,
+      .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero-visual {
+        min-height: 560px;
+      }
+    }
+
+    @media (max-width: 920px) {
+
+      .nav-links,
+      .nav-phone,
+      .nav-actions .btn {
+        display: none;
+      }
+
+      .menu-btn {
+        display: inline-block;
+      }
+
+      .mobile-panel[data-open="true"] {
+        display: block;
+      }
+
+      .hero {
+        padding-top: 18px;
+      }
+
+      .visual-main {
+        inset: 34px 8px 0 8px;
+      }
+
+      .visual-stats {
+        right: 8px;
+      }
+
+      .visual-badge {
+        left: 8px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      :root {
+        --nav-h: 76px;
+      }
+
+      .section {
+        padding: 54px 0;
+      }
+
+      .container {
+        width: min(calc(100% - 1.1rem), var(--container));
+      }
+
+      .nav-wrap {
+        padding-top: 8px;
+      }
+
+      .nav {
+        border-radius: 20px;
+        padding: 0 12px;
+      }
+
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+        border-radius: 14px;
+      }
+
+      .brand-copy span {
+        display: none;
+      }
+
+      .hero-grid {
+        gap: 18px;
+      }
+
+      h1 {
+        max-width: 11ch;
+      }
+
+      .hero-points,
+      .why-list,
+      .compare,
+      .form-grid,
+      .services-grid,
+      .process-wrap,
+      .trust-bar,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .reviews-marquee {
+        --review-gap: 12px;
+        mask-image: none;
+        -webkit-mask-image: none;
+      }
+
+      .testimonial {
+        width: min(300px, calc(100vw - 1.5rem));
+        padding: 18px;
+      }
+
+      .review-meta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-points {
+        max-width: none;
+      }
+
+      .point-chip {
+        padding: 13px 14px;
+      }
+
+      .visual-main {
+        inset: 54px 0 0 0;
+        padding: 18px;
+      }
+
+      .hero-visual {
+        min-height: 650px;
+      }
+
+      .window-grid {
+        inset: 34px 20px auto 20px;
+        height: 172px;
+      }
+
+      .kitchen-island {
+        left: 8%;
+        right: 8%;
+        bottom: 20%;
+      }
+
+      .visual-badge,
+      .visual-note,
+      .visual-stats,
+      .hero-side-card {
+        position: absolute;
+      }
+
+      .visual-badge {
+        width: calc(100% - 56px);
+        left: 16px;
+        right: 16px;
+        top: 0;
+      }
+
+      .visual-stats {
+        width: calc(100% - 34px);
+        left: 17px;
+        right: 17px;
+        top: auto;
+        bottom: 116px;
+      }
+
+      .visual-note {
+        width: calc(100% - 34px);
+        left: 17px;
+        bottom: 12px;
+      }
+
+      .hero-side-card {
+        display: none;
+      }
+
+      .cta-band {
+        grid-template-columns: 1fr;
+        padding: 22px;
+      }
+
+      .quote-panel,
+      .contact-card,
+      .results-copy,
+      .why-panel,
+      .before-after {
+        padding: 24px 18px;
+      }
+
+      .footer-shell {
+        padding: 28px 18px;
+      }
+
+      .sticky-mobile-cta {
+        display: flex;
+      }
+
+      .footer {
+        padding-bottom: 120px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+        animation: none !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav-wrap">
+    <div class="container">
+      <header class="nav" aria-label="Main navigation">
+        <a href="#top" class="brand" aria-label="Qlean and Co home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2L14.6 8.2L21 10.8L14.6 13.4L12 19.6L9.4 13.4L3 10.8L9.4 8.2L12 2Z" fill="currentColor" />
+            </svg>
+          </span>
+          <span class="brand-copy">
+            <strong>Qlean and Co</strong>
+            <span>Homes, rentals, retail & commercial cleanup</span>
+          </span>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#services">Services</a>
+          <a href="#results">Results</a>
+          <a href="#process">Process</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#quote">Get a Quote</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a class="nav-phone" href="tel:+16476296759" aria-label="Call placeholder phone number">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M6.6 10.8C8.1 13.7 10.4 16 13.2 17.4L15.4 15.2C15.7 14.9 16.1 14.8 16.5 14.9C17.8 15.3 19.1 15.5 20.5 15.5C21.1 15.5 21.5 15.9 21.5 16.5V20C21.5 20.6 21.1 21 20.5 21C10.8 21 3 13.2 3 3.5C3 2.9 3.4 2.5 4 2.5H7.5C8.1 2.5 8.5 2.9 8.5 3.5C8.5 4.9 8.7 6.2 9.1 7.5C9.2 7.9 9.1 8.3 8.8 8.6L6.6 10.8Z"
+                fill="currentColor" />
+            </svg>
+            (647)-629-6759
+          </a>
+          <a class="btn btn-primary" href="#quote">Request Quote</a>
+          <button class="menu-btn" id="menuToggle" aria-expanded="false" aria-controls="mobilePanel"
+            aria-label="Open menu"><span></span></button>
+        </div>
+      </header>
+
+      <div class="mobile-panel" id="mobilePanel" data-open="false">
+        <a href="#services">Services</a>
+        <a href="#results">Results</a>
+        <a href="#process">Process</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#quote">Get a Quote</a>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#quote">Request Quote</a>
+          <a class="btn btn-secondary" href="tel:+16476296759">Call Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow"><span class="dot"></span>Home, move-out, rental and commercial cleaning</span>
+          <h1>Professional cleaning that makes your <span class="hero-highlight">space feel fresh again</span>.</h1>
+          <p class="lead">We help homeowners, tenants, landlords and businesses with reliable cleaning for homes,
+            apartments, rental turnovers, move-outs, offices, stores and messy spaces that need real attention.</p>
+
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#quote">Get My Free Quote</a>
+            <a class="btn btn-secondary" href="#services">Explore Services</a>
+          </div>
+
+          <div class="hero-trust" aria-label="Trust signals">
+            <span>Fast quote turnaround</span>
+            <span>Flexible booking times</span>
+            <span>Homes, rentals & businesses</span>
+          </div>
+
+          <div class="hero-points">
+            <div class="point-chip">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 3L14.2 8.8L20 11L14.2 13.2L12 19L9.8 13.2L4 11L9.8 8.8L12 3Z" fill="#1A7CFF" />
+              </svg>
+              <div>
+                <strong>Thorough cleaning</strong>
+                <div class="soft">The kind of clean you can notice right away.</div>
+              </div>
+            </div>
+            <div class="point-chip">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7 4H17C18.1 4 19 4.9 19 6V18C19 19.1 18.1 20 17 20H7C5.9 20 5 19.1 5 18V6C5 4.9 5.9 4 7 4Z"
+                  stroke="#7C4DFF" stroke-width="2" />
+                <path d="M8 9H16M8 13H13" stroke="#7C4DFF" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <div>
+                <strong>Easy booking process</strong>
+                <div class="soft">Quick quote, clear service options, simple scheduling.</div>
+              </div>
+            </div>
+            <div class="point-chip">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M12 21S4 17 4 10.5C4 7.5 6.4 5 9.4 5C10.9 5 12.2 5.7 13 6.8C13.8 5.7 15.1 5 16.6 5C19.6 5 22 7.5 22 10.5C22 17 14 21 12 21Z"
+                  fill="#20C8FF" />
+              </svg>
+              <div>
+                <strong>Trusted service feel</strong>
+                <div class="soft">Professional, friendly and reassuring from first click.</div>
+              </div>
+            </div>
+            <div class="point-chip">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 12H20" stroke="#1DB67D" stroke-width="2" stroke-linecap="round" />
+                <path d="M12 4L20 12L12 20" stroke="#1DB67D" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <div>
+                <strong>Mobile friendly</strong>
+                <div class="soft">Easy to browse and request a quote on your phone.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="card visual-badge">
+            <span class="stars">★★★★★</span>
+            <h3>Clean, credible and easy to trust.</h3>
+            <p>Clear service messaging, strong trust signals and a visible path to request a quote.</p>
+          </div>
+
+          <div class="card visual-main">
+            <div class="visual-photo">
+              <div class="window-grid">
+                <div class="window"></div>
+                <div class="window"></div>
+              </div>
+              <div class="counter-objects"></div>
+              <div class="kitchen-island"></div>
+            </div>
+          </div>
+
+          <div class="card visual-stats">
+            <div class="eyebrow"><span class="dot"></span>Why clients choose us!</div>
+            <div class="stat-grid">
+              <div><strong>6</strong><span>Cleaning services</span></div>
+              <div><strong>Fast</strong><span>Quote response</span></div>
+              <div><strong>Easy</strong><span>Booking process</span></div>
+              <div><strong>100%</strong><span>Mobile friendly</span></div>
+            </div>
+          </div>
+
+          <div class="card visual-note">
+            <div class="icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12L10 17L20 7" stroke="#1A7CFF" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <strong>Simple quote request</strong>
+            <p class="muted">Quick details now, then we follow up with the right cleaning quote.</p>
+          </div>
+
+          <div class="hero-side-card">
+            <strong>Need a rush clean?</strong>
+            <p>Great for move-outs, post-tenant cleanup, last-minute deep cleans and urgent business cleanups.</p>
+            <a class="btn btn-ghost" href="#quote">Get a Fast Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip section">
+      <div class="container">
+        <div class="card trust-bar reveal">
+          <div>
+            <strong>Cleaning help that feels dependable from the first scroll.</strong>
+            <p class="muted">Clear service details, trust signals, reviews and a fast quote path help visitors act
+              quickly.</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 3L19 6V11C19 16 15.6 20.4 12 21C8.4 20.4 5 16 5 11V6L12 3Z" fill="#1A7CFF" />
+              </svg>
+            </div>
+            <div>
+              <strong>Professional team</strong>
+              <p class="muted">Friendly, respectful and detail-focused service.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 7H20M8 3V11M16 3V11M6 21H18C19.1 21 20 20.1 20 19V7H4V19C4 20.1 4.9 21 6 21Z"
+                  stroke="#7C4DFF" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div>
+              <strong>Flexible service</strong>
+              <p class="muted">Homes, rentals, offices, stores and custom cleanup jobs.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 2L14.6 8.2L21 10.8L14.6 13.4L12 19.6L9.4 13.4L3 10.8L9.4 8.2L12 2Z" fill="#20C8FF" />
+              </svg>
+            </div>
+            <div>
+              <strong>Easy to book</strong>
+              <p class="muted">Call or request a quote in just a few taps.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><span class="dot"></span>Services</span>
+          <h2>Cleaning services for homes, rentals, stores and commercial spaces.</h2>
+          <p class="lead">Whether you need weekly home cleaning, a deep clean before guests arrive, a move-out turnover,
+            or help with a messy property, the services below make it easy to see where we can help.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="card service-card reveal">
+            <div class="service-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 11L12 4L20 11V20H4V11Z" stroke="#1A7CFF" stroke-width="2" stroke-linejoin="round" />
+                <path d="M9 20V13H15V20" stroke="#1A7CFF" stroke-width="2" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3>Residential Cleaning</h3>
+            <p>Routine or one-time cleaning for houses, condos and apartments. Perfect for busy families, working
+              professionals and anyone who wants their home looking consistently fresh.</p>
+            <ul class="service-list">
+              <li>Bedrooms, bathrooms and kitchens</li>
+              <li>Dusting, surfaces and detail work</li>
+              <li>Flexible repeat or one-time visits</li>
+            </ul>
+          </article>
+
+          <article class="card service-card reveal">
+            <div class="service-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 2L14.8 8.2L21 11L14.8 13.8L12 20L9.2 13.8L3 11L9.2 8.2L12 2Z" fill="#7C4DFF" />
+              </svg>
+            </div>
+            <h3>Deep Cleaning</h3>
+            <p>For spaces that need more than a quick tidy-up. Ideal for first-time cleans, seasonal resets, neglected
+              rooms and homes that need extra detail work.</p>
+            <ul class="service-list">
+              <li>High-touch zones and overlooked areas</li>
+              <li>Built for visible improvement</li>
+              <li>Perfect for first-time intensive cleans</li>
+            </ul>
+          </article>
+
+          <article class="card service-card reveal">
+            <div class="service-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 19H19M8 16V8M12 16V5M16 16V10" stroke="#20C8FF" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>Move-In / Move-Out Cleaning</h3>
+            <p>Detailed cleaning for move-ins, move-outs and rental turnovers so the space feels ready for the next
+              tenant, owner or showing.</p>
+            <ul class="service-list">
+              <li>Rental turnovers and vacancy refreshes</li>
+              <li>Closing-day cleaning support</li>
+              <li>Ideal for apartment and condo units</li>
+            </ul>
+          </article>
+
+          <article class="card service-card reveal">
+            <div class="service-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 20V7C4 5.9 4.9 5 6 5H18C19.1 5 20 5.9 20 7V20M2 20H22M9 9H15M9 13H15" stroke="#1DB67D"
+                  stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>Commercial Cleaning</h3>
+            <p>Reliable cleaning for offices, shared workspaces, clinics and other business spaces where cleanliness,
+              presentation and consistency matter every day.</p>
+            <ul class="service-list">
+              <li>Offices and work areas</li>
+              <li>Restrooms, touchpoints and floors</li>
+              <li>Scheduled maintenance options</li>
+            </ul>
+          </article>
+
+          <article class="card service-card reveal">
+            <div class="service-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 20V9L12 4L20 9V20M8 20V12H16V20" stroke="#FF9F43" stroke-width="2"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3>Retail / Store Cleaning</h3>
+            <p>Keep your storefront, showroom and customer areas looking polished with cleaning that supports a better
+              first impression every day.</p>
+            <ul class="service-list">
+              <li>Showroom and customer areas</li>
+              <li>Front-of-house presentation</li>
+              <li>After-hours cleaning scheduling</li>
+            </ul>
+          </article>
+
+          <article class="card service-card reveal">
+            <div class="service-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 4V20M4 12H20" stroke="#1A7CFF" stroke-width="2" stroke-linecap="round" />
+                <path d="M6 6L18 18M18 6L6 18" stroke="#7C4DFF" stroke-width="2" stroke-linecap="round"
+                  opacity="0.35" />
+              </svg>
+            </div>
+            <h3>Special Cleanup Jobs</h3>
+            <p>For post-tenant messes, post-renovation dust, neglected units or other tougher jobs that need extra time,
+              effort and attention to detail.</p>
+            <ul class="service-list">
+              <li>Heavy-duty property refreshes</li>
+              <li>Messy house or unit support</li>
+              <li>Custom quote-based jobs</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight-cta">
+      <div class="container">
+        <div class="card cta-band reveal">
+          <div>
+            <h3>Need cleaning help without the back-and-forth?</h3>
+            <p>Tell us what needs to be cleaned, choose the service that fits, and we will help you get booked quickly.
+            </p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-secondary" href="#quote">Request a Quote</a>
+            <a class="btn btn-ghost" href="#results">See Before & After</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section why-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><span class="dot"></span>Why choose us</span>
+          <h2>Why clients trust us with their homes, rentals and workspaces.</h2>
+          <p class="lead">We keep things simple: show up on time, clean carefully, communicate clearly and leave the
+            space looking noticeably better than when we arrived.</p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-list">
+            <article class="card why-card reveal">
+              <div class="service-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 2L19 6V11C19 16 15.6 20.4 12 21C8.4 20.4 5 16 5 11V6L12 2Z" fill="#1A7CFF" />
+                </svg>
+              </div>
+              <h3>Reliable and professional</h3>
+              <p>We show up when scheduled, communicate clearly and treat your home or business space with care and
+                respect.</p>
+            </article>
+            <article class="card why-card reveal">
+              <div class="service-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M4 12H20M12 4V20" stroke="#7C4DFF" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3>Attention to detail</h3>
+              <p>From kitchens and bathrooms to touchpoints, corners and finishing details, we focus on the areas people
+                notice most.</p>
+            </article>
+            <article class="card why-card reveal">
+              <div class="service-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 8V12L15 15" stroke="#20C8FF" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <circle cx="12" cy="12" r="9" stroke="#20C8FF" stroke-width="2" />
+                </svg>
+              </div>
+              <h3>Flexible scheduling</h3>
+              <p>Need daytime, evening or turnaround scheduling? We make it easier to fit cleaning into real life and
+                business hours.</p>
+            </article>
+            <article class="card why-card reveal">
+              <div class="service-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M5 13L9 17L19 7" stroke="#1DB67D" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3>Satisfaction-focused approach</h3>
+              <p>Our goal is simple: leave you with a cleaner, fresher space and a service experience you feel good
+                recommending.</p>
+            </article>
+          </div>
+
+          <aside class="card why-panel reveal">
+            <span class="eyebrow"><span class="dot"></span>What you can expect</span>
+            <h3 style="margin-top:16px; font-size:1.7rem;">Cleaning service that feels easy to hire again</h3>
+            <p class="lead" style="margin-top:14px; max-width:44ch;">We keep the experience straightforward: clear
+              quotes, reliable service, flexible scheduling and results that make the property feel looked after.</p>
+            <ul class="assurance-list">
+              <li>Clear communication before, during and after the job.</li>
+              <li>Thoughtful cleaning for both homes and commercial spaces.</li>
+              <li>Flexible service options for routine visits and one-time cleanups.</li>
+              <li>A professional finish that helps the space look ready again.</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="results">
+      <div class="container results-grid">
+        <div class="card before-after reveal">
+          <div class="section-head" style="margin-bottom:0; max-width:none;">
+            <span class="eyebrow"><span class="dot"></span>Before & after</span>
+            <h2>Because cleaning is about the difference you can actually see.</h2>
+          </div>
+          <div class="compare" aria-label="Before and after visual concept">
+            <div class="compare-card before">
+              <span class="label">Before</span>
+              <div class="room">
+                <div class="plant"></div>
+                <div class="sofa"></div>
+                <div class="box"></div>
+                <div class="lamp"></div>
+                <div class="rug"></div>
+                <div class="trash"></div>
+                <div class="floor"></div>
+              </div>
+            </div>
+            <div class="compare-card after">
+              <span class="label">After</span>
+              <div class="room">
+                <div class="plant"></div>
+                <div class="sofa"></div>
+                <div class="box"></div>
+                <div class="lamp"></div>
+                <div class="rug"></div>
+                <div class="sparkle"></div>
+                <div class="floor"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card results-copy reveal">
+          <span class="eyebrow"><span class="dot"></span>Visible results</span>
+          <h3 style="margin-top:16px; font-size:1.82rem;">From messy, dusty or tired-looking to fresh, bright and ready.
+          </h3>
+          <p class="lead" style="margin-top:14px; max-width:none;">Whether it is a move-out, a deep clean, a
+            post-renovation reset or regular upkeep, clients want the same thing: a space that looks better, feels
+            cleaner and takes stress off their plate.</p>
+          <div class="metric-list">
+            <div class="metric">
+              <div class="trust-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M4 18L10 12L14 16L20 8" stroke="#1A7CFF" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div>
+                <strong>Noticeable improvement</strong>
+                <p>Floors, kitchens, bathrooms and high-touch areas look brighter, cleaner and more presentable.</p>
+              </div>
+            </div>
+            <div class="metric">
+              <div class="trust-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 3V21M3 12H21" stroke="#7C4DFF" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div>
+                <strong>Cleaner-looking spaces</strong>
+                <p>Useful for rentals, listings, stores and homes where presentation matters right away.</p>
+              </div>
+            </div>
+            <div class="metric">
+              <div class="trust-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M5 12L10 17L20 7" stroke="#1DB67D" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div>
+                <strong>Easy next step</strong>
+                <p>Once you can picture the result, requesting a quote feels simple and worth doing.</p>
+              </div>
+            </div>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#quote">Get My Cleaning Quote</a>
+            <a class="btn btn-secondary" href="#reviews">Read Reviews</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><span class="dot"></span>How it works</span>
+          <h2>How to get your cleaning booked in four simple steps.</h2>
+          <p class="lead">No complicated process. Just tell us what you need, choose the right service and pick a time
+            that works.</p>
+        </div>
+
+        <div class="process-wrap">
+          <article class="card step reveal">
+            <div class="step-number">01</div>
+            <h3 style="margin-top:18px;">Request a quote</h3>
+            <p>Share the property type, the kind of cleaning you need and any urgent details about the job.</p>
+          </article>
+          <article class="card step reveal">
+            <div class="step-number">02</div>
+            <h3 style="margin-top:18px;">Choose your service</h3>
+            <p>We will recommend the right cleaning service for your home, rental unit, office, store or special
+              cleanup.</p>
+          </article>
+          <article class="card step reveal">
+            <div class="step-number">03</div>
+            <h3 style="margin-top:18px;">Schedule the visit</h3>
+            <p>Choose a time that works for your household, tenant turnover, store hours or office schedule.</p>
+          </article>
+          <article class="card step reveal">
+            <div class="step-number">04</div>
+            <h3 style="margin-top:18px;">Enjoy the results</h3>
+            <p>Enjoy a cleaner, fresher space that feels easier to live in, show or work in.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><span class="dot"></span>Reviews</span>
+          <h2>Trusted for home cleaning, move-outs, deep cleans and business spaces.</h2>
+          <!-- <p class="lead">Real cleaning websites feel stronger when the reviews look easy to scan. This version uses two
+            smooth rows of review cards, with one moving left and one moving right, plus a light mop-style sweep
+            underneath.</p> -->
+        </div>
+
+        <div class="reviews-marquee reveal" aria-label="Customer reviews">
+          <div class="marquee-row left">
+            <div class="marquee-track">
+              <article class="card testimonial"><span class="stars" aria-label="5 star review">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Move-out clean</span><span>North York</span></div>
+                <blockquote>“They handled our move-out clean on short notice and the kitchen, bathrooms and floors
+                  looked ready for handoff by the end of the day.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">LM</div>
+                  <div><strong>Leah M.</strong>
+                    <div class="muted">Tenant turnover client</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial"><span class="stars" aria-label="5 star review">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Retail cleaning</span><span>Mississauga</span></div>
+                <blockquote>“Our store looked polished the next morning. Glass, counters and floors all felt
+                  customer-ready without any hassle on our end.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">AR</div>
+                  <div><strong>Amira R.</strong>
+                    <div class="muted">Retail owner</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial"><span class="stars" aria-label="5 star review">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Recurring home</span><span>Milton</span></div>
+                <blockquote>“Easy booking, clear communication and a home that felt fresh the moment we walked back in.
+                  Exactly the kind of service we wanted.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">JP</div>
+                  <div><strong>Jordan P.</strong>
+                    <div class="muted">Home cleaning client</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial"><span class="stars" aria-label="5 star review">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Deep clean</span><span>Etobicoke</span></div>
+                <blockquote>“They got into the details we always notice later. Bathrooms, trim and high-touch areas all
+                  looked noticeably better.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">SK</div>
+                  <div><strong>Sonia K.</strong>
+                    <div class="muted">Residential client</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial"><span class="stars" aria-label="5 star review">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Office clean</span><span>Toronto</span></div>
+                <blockquote>“Professional, on time and easy to coordinate with. The office felt cleaner and more
+                  organized after every visit.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">DN</div>
+                  <div><strong>Daniel N.</strong>
+                    <div class="muted">Small business manager</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial"><span class="stars" aria-label="5 star review">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Post-renovation</span><span>Oakville</span></div>
+                <blockquote>“After all the renovation dust, they made the place feel livable again. The windows and
+                  floors made the biggest difference.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">PS</div>
+                  <div><strong>Priya S.</strong>
+                    <div class="muted">Homeowner</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial"><span class="stars" aria-label="5 star review">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Messy property</span><span>Brampton</span></div>
+                <blockquote>“This was a tougher cleanup than normal and they handled it with zero judgment. Calm,
+                  efficient and very thorough.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">KV</div>
+                  <div><strong>Karan V.</strong>
+                    <div class="muted">Property cleanup client</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial"><span class="stars" aria-label="5 star review">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Apartment clean</span><span>Downtown</span></div>
+                <blockquote>“My condo felt brighter, lighter and much easier to enjoy after the clean. Great for compact
+                  spaces where every detail shows.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">MB</div>
+                  <div><strong>Maya B.</strong>
+                    <div class="muted">Apartment resident</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial"><span class="stars" aria-label="5 star review">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Move-in clean</span><span>Burlington</span></div>
+                <blockquote>“We wanted a fresh start before unpacking and that is exactly what we got. The place looked
+                  clean, bright and ready right away.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">CL</div>
+                  <div><strong>Chloe L.</strong>
+                    <div class="muted">Move-in client</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial"><span class="stars" aria-label="5 star review">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Rental turnover</span><span>Scarborough</span></div>
+                <blockquote>“Great communication from quote to finish. We needed the unit cleaned quickly and it looked
+                  much more presentable for the next showing.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">HT</div>
+                  <div><strong>Hassan T.</strong>
+                    <div class="muted">Landlord</div>
+                  </div>
+                </footer>
+              </article>
+
+              <article class="card testimonial" aria-hidden="true"><span class="stars">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Move-out clean</span><span>North York</span></div>
+                <blockquote>“They handled our move-out clean on short notice and the kitchen, bathrooms and floors
+                  looked ready for handoff by the end of the day.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">LM</div>
+                  <div><strong>Leah M.</strong>
+                    <div class="muted">Tenant turnover client</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial" aria-hidden="true"><span class="stars">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Retail cleaning</span><span>Mississauga</span></div>
+                <blockquote>“Our store looked polished the next morning. Glass, counters and floors all felt
+                  customer-ready without any hassle on our end.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">AR</div>
+                  <div><strong>Amira R.</strong>
+                    <div class="muted">Retail owner</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial" aria-hidden="true"><span class="stars">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Recurring home</span><span>Milton</span></div>
+                <blockquote>“Easy booking, clear communication and a home that felt fresh the moment we walked back in.
+                  Exactly the kind of service we wanted.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">JP</div>
+                  <div><strong>Jordan P.</strong>
+                    <div class="muted">Home cleaning client</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial" aria-hidden="true"><span class="stars">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Deep clean</span><span>Etobicoke</span></div>
+                <blockquote>“They got into the details we always notice later. Bathrooms, trim and high-touch areas all
+                  looked noticeably better.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">SK</div>
+                  <div><strong>Sonia K.</strong>
+                    <div class="muted">Residential client</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial" aria-hidden="true"><span class="stars">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Office clean</span><span>Toronto</span></div>
+                <blockquote>“Professional, on time and easy to coordinate with. The office felt cleaner and more
+                  organized after every visit.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">DN</div>
+                  <div><strong>Daniel N.</strong>
+                    <div class="muted">Small business manager</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial" aria-hidden="true"><span class="stars">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Post-renovation</span><span>Oakville</span></div>
+                <blockquote>“After all the renovation dust, they made the place feel livable again. The windows and
+                  floors made the biggest difference.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">PS</div>
+                  <div><strong>Priya S.</strong>
+                    <div class="muted">Homeowner</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial" aria-hidden="true"><span class="stars">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Messy property</span><span>Brampton</span></div>
+                <blockquote>“This was a tougher cleanup than normal and they handled it with zero judgment. Calm,
+                  efficient and very thorough.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">KV</div>
+                  <div><strong>Karan V.</strong>
+                    <div class="muted">Property cleanup client</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial" aria-hidden="true"><span class="stars">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Apartment clean</span><span>Downtown</span></div>
+                <blockquote>“My condo felt brighter, lighter and much easier to enjoy after the clean. Great for compact
+                  spaces where every detail shows.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">MB</div>
+                  <div><strong>Maya B.</strong>
+                    <div class="muted">Apartment resident</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial" aria-hidden="true"><span class="stars">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Move-in clean</span><span>Burlington</span></div>
+                <blockquote>“We wanted a fresh start before unpacking and that is exactly what we got. The place looked
+                  clean, bright and ready right away.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">CL</div>
+                  <div><strong>Chloe L.</strong>
+                    <div class="muted">Move-in client</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial" aria-hidden="true"><span class="stars">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Rental turnover</span><span>Scarborough</span></div>
+                <blockquote>“Great communication from quote to finish. We needed the unit cleaned quickly and it looked
+                  much more presentable for the next showing.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">HT</div>
+                  <div><strong>Hassan T.</strong>
+                    <div class="muted">Landlord</div>
+                  </div>
+                </footer>
+              </article>
+            </div>
+          </div>
+
+          <div class="marquee-row right reverse">
+            <div class="marquee-track">
+              <article class="card testimonial"><span class="stars" aria-label="5 star review">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Weekly service</span><span>Toronto West</span></div>
+                <blockquote>“They are consistent, professional and very easy to trust in our home. The quality has
+                  stayed strong visit after visit.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">OG</div>
+                  <div><strong>Olivia G.</strong>
+                    <div class="muted">Recurring client</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial"><span class="stars" aria-label="5 star review">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Storefront clean</span><span>Guelph</span></div>
+                <blockquote>“The front windows, counters and floors looked spotless. It gave the shop a much better
+                  first impression.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">RB</div>
+                  <div><strong>Rahul B.</strong>
+                    <div class="muted">Store owner</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial"><span class="stars" aria-label="5 star review">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Condo move-out</span><span>Liberty Village</span>
+                </div>
+                <blockquote>“Fast response, a clear quote and a condo that looked far better than we expected by the
+                  time they finished.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">DT</div>
+                  <div><strong>Dina T.</strong>
+                    <div class="muted">Condo client</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial"><span class="stars" aria-label="5 star review">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Post-tenant cleanup</span><span>Pickering</span></div>
+                <blockquote>“They turned a stressful rental turnover into something manageable and presentable. That
+                  saved us a lot of time.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">MI</div>
+                  <div><strong>Marco I.</strong>
+                    <div class="muted">Property manager</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial"><span class="stars" aria-label="5 star review">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Seasonal reset</span><span>Milton</span></div>
+                <blockquote>“We booked a deep seasonal clean and the whole house felt renewed afterward. It changed how
+                  the space felt immediately.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">FL</div>
+                  <div><strong>Farah L.</strong>
+                    <div class="muted">Homeowner</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial"><span class="stars" aria-label="5 star review">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Office refresh</span><span>Mississauga</span></div>
+                <blockquote>“The team was discreet, efficient and organized. Our workspace felt cleaner without any
+                  disruption to the day.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">AK</div>
+                  <div><strong>Adam K.</strong>
+                    <div class="muted">Operations lead</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial"><span class="stars" aria-label="5 star review">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Detailed clean</span><span>Oakville</span></div>
+                <blockquote>“They did not rush the details. Mirrors, fixtures and edges all looked finished in a way
+                  that made the home feel more polished.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">SR</div>
+                  <div><strong>Sabrina R.</strong>
+                    <div class="muted">Residential client</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial"><span class="stars" aria-label="5 star review">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Messy house help</span><span>Brampton</span></div>
+                <blockquote>“Very respectful team. They took on a home that needed serious help and brought it back to a
+                  point where it finally felt under control.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">YT</div>
+                  <div><strong>Yasmin T.</strong>
+                    <div class="muted">Cleanup client</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial"><span class="stars" aria-label="5 star review">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Commercial cleanup</span><span>Markham</span></div>
+                <blockquote>“Straightforward, dependable and easy to schedule. They understood exactly what we needed
+                  and delivered a very polished result.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">IA</div>
+                  <div><strong>Ibrahim A.</strong>
+                    <div class="muted">Commercial tenant</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial"><span class="stars" aria-label="5 star review">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Whole-home clean</span><span>Oakville</span></div>
+                <blockquote>“The house looked brighter, smelled fresh and felt much more put together when we came back.
+                  A very reassuring level of care.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">VC</div>
+                  <div><strong>Vanessa C.</strong>
+                    <div class="muted">Homeowner</div>
+                  </div>
+                </footer>
+              </article>
+
+              <article class="card testimonial" aria-hidden="true"><span class="stars">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Weekly service</span><span>Toronto West</span></div>
+                <blockquote>“They are consistent, professional and very easy to trust in our home. The quality has
+                  stayed strong visit after visit.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">OG</div>
+                  <div><strong>Olivia G.</strong>
+                    <div class="muted">Recurring client</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial" aria-hidden="true"><span class="stars">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Storefront clean</span><span>Guelph</span></div>
+                <blockquote>“The front windows, counters and floors looked spotless. It gave the shop a much better
+                  first impression.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">RB</div>
+                  <div><strong>Rahul B.</strong>
+                    <div class="muted">Store owner</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial" aria-hidden="true"><span class="stars">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Condo move-out</span><span>Liberty Village</span>
+                </div>
+                <blockquote>“Fast response, a clear quote and a condo that looked far better than we expected by the
+                  time they finished.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">DT</div>
+                  <div><strong>Dina T.</strong>
+                    <div class="muted">Condo client</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial" aria-hidden="true"><span class="stars">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Post-tenant cleanup</span><span>Pickering</span></div>
+                <blockquote>“They turned a stressful rental turnover into something manageable and presentable. That
+                  saved us a lot of time.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">MI</div>
+                  <div><strong>Marco I.</strong>
+                    <div class="muted">Property manager</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial" aria-hidden="true"><span class="stars">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Seasonal reset</span><span>Milton</span></div>
+                <blockquote>“We booked a deep seasonal clean and the whole house felt renewed afterward. It changed how
+                  the space felt immediately.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">FL</div>
+                  <div><strong>Farah L.</strong>
+                    <div class="muted">Homeowner</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial" aria-hidden="true"><span class="stars">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Office refresh</span><span>Mississauga</span></div>
+                <blockquote>“The team was discreet, efficient and organized. Our workspace felt cleaner without any
+                  disruption to the day.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">AK</div>
+                  <div><strong>Adam K.</strong>
+                    <div class="muted">Operations lead</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial" aria-hidden="true"><span class="stars">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Detailed clean</span><span>Oakville</span></div>
+                <blockquote>“They did not rush the details. Mirrors, fixtures and edges all looked finished in a way
+                  that made the home feel more polished.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">SR</div>
+                  <div><strong>Sabrina R.</strong>
+                    <div class="muted">Residential client</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial" aria-hidden="true"><span class="stars">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Messy house help</span><span>Brampton</span></div>
+                <blockquote>“Very respectful team. They took on a home that needed serious help and brought it back to a
+                  point where it finally felt under control.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">YT</div>
+                  <div><strong>Yasmin T.</strong>
+                    <div class="muted">Cleanup client</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial" aria-hidden="true"><span class="stars">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Commercial cleanup</span><span>Markham</span></div>
+                <blockquote>“Straightforward, dependable and easy to schedule. They understood exactly what we needed
+                  and delivered a very polished result.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">IA</div>
+                  <div><strong>Ibrahim A.</strong>
+                    <div class="muted">Commercial tenant</div>
+                  </div>
+                </footer>
+              </article>
+              <article class="card testimonial" aria-hidden="true"><span class="stars">★★★★★</span>
+                <div class="review-meta"><span class="review-tag">Whole-home clean</span><span>Oakville</span></div>
+                <blockquote>“The house looked brighter, smelled fresh and felt much more put together when we came back.
+                  A very reassuring level of care.”</blockquote>
+                <footer>
+                  <div class="avatar" aria-hidden="true">VC</div>
+                  <div><strong>Vanessa C.</strong>
+                    <div class="muted">Homeowner</div>
+                  </div>
+                </footer>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="quote">
+      <div class="container quote-wrap">
+        <aside class="card quote-panel reveal">
+          <span class="eyebrow"><span class="dot"></span>Free cleaning quote</span>
+          <h2 style="margin-top:18px; color:#fff;">Tell us what needs cleaning and we’ll send the right quote.</h2>
+          <p class="lead" style="color:rgba(255,255,255,0.8); max-width:42ch;">Whether you need regular home cleaning, a
+            move-out clean, a retail refresh or a special cleanup job, start with a few quick details below.</p>
+          <ul>
+            <li>Great for move-outs, rental turnovers and urgent cleanups</li>
+            <li>Works for homeowners, tenants, landlords, stores and businesses</li>
+            <li>Simple enough to complete quickly on mobile</li>
+            <li>We will handle the rest!</li>
+          </ul>
+        </aside>
+
+        <div class="card contact-card reveal">
+          <div class="section-head" style="margin-bottom:24px; max-width:none;">
+            <span class="eyebrow"><span class="dot"></span>Request estimate</span>
+            <h3 style="margin-top:16px; font-size:1.8rem;">Tell us about the job</h3>
+          </div>
+
+          <form id="quoteForm">
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required />
+              </div>
+              <div class="field">
+                <label for="phone">Phone number</label>
+                <input id="phone" name="phone" type="tel" placeholder="(000)-000-0000" required />
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+              <div class="field">
+                <label for="service">Service needed</label>
+                <select id="service" name="service" required>
+                  <option value="">Select a service</option>
+                  <option>Residential Cleaning</option>
+                  <option>Deep Cleaning</option>
+                  <option>Move-In / Move-Out Cleaning</option>
+                  <option>Commercial Cleaning</option>
+                  <option>Retail / Store Cleaning</option>
+                  <option>Special Cleanup Job</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="property">Property type</label>
+                <select id="property" name="property">
+                  <option value="">Choose one</option>
+                  <option>House</option>
+                  <option>Apartment / Condo</option>
+                  <option>Rental Unit</option>
+                  <option>Retail Store</option>
+                  <option>Office / Commercial</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="timeline">Preferred timeline</label>
+                <select id="timeline" name="timeline">
+                  <option value="">Choose one</option>
+                  <option>As soon as possible</option>
+                  <option>This week</option>
+                  <option>Next week</option>
+                  <option>Flexible</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="details">Job details</label>
+              <textarea id="details" name="details"
+                placeholder="Tell us about the property, the rooms or areas involved, the level of mess, and anything important we should know."></textarea>
+            </div>
+
+            <div class="btn-row" style="margin-top: 4px;">
+              <button class="btn btn-primary" type="submit">Get My Free Quote</button>
+              <a class="btn btn-secondary" href="tel:+16476296759">Call Instead</a>
+            </div>
+            <!-- <p class="form-note">Demo form only. Connect this to your email, CRM or booking system before launch.</p> -->
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="card footer-shell reveal">
+        <div class="footer-grid">
+          <div>
+            <div class="brand" style="margin-bottom:16px;">
+              <span class="brand-mark" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2L14.6 8.2L21 10.8L14.6 13.4L12 19.6L9.4 13.4L3 10.8L9.4 8.2L12 2Z"
+                    fill="currentColor" />
+                </svg>
+              </span>
+              <span class="brand-copy">
+                <strong style="color:#fff;">Qlean and Co</strong>
+                <span style="display:block; color:rgba(255,255,255,0.6);">Homes, rentals, retail & commercial
+                  cleaning</span>
+              </span>
+            </div>
+            <p>Helping clients reclaim their spaces through reliable cleaning, careful attention to detail, and service
+              that feels professional from start to finish.</p>
+            <div class="service-area">
+              <span>GTA</span>
+              <span>Halton</span>
+              <span>Hamilton</span>
+            </div>
+          </div>
+
+          <div>
+            <h4>Quick links</h4>
+            <ul>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#results">Results</a></li>
+              <li><a href="#process">How It Works</a></li>
+              <li><a href="#reviews">Reviews</a></li>
+              <li><a href="#quote">Request Quote</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="tel:+16476296759">(647)-629-6759</a></li>
+              <li><a href="mailto:info@qleanandco.ca">info@qleanandco.ca</a></li>
+              <li>Serving GTA, Halton, Hamilton & Surrounding Areas 🧹</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Follow</h4>
+            <ul>
+              <li><a href="https://www.instagram.com/qleanandco/">Instagram</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© <span id="year"></span> Qlean and Co All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sticky-mobile-cta" aria-label="Sticky mobile actions">
+    <a href="tel:+16476296759"><span class="btn btn-secondary">Call Now</span></a>
+    <a href="#quote"><span class="btn btn-primary">Get Quote</span></a>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobilePanel = document.getElementById('mobilePanel');
+    const panelLinks = mobilePanel.querySelectorAll('a');
+
+    menuToggle?.addEventListener('click', () => {
+      const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!isOpen));
+      mobilePanel.setAttribute('data-open', String(!isOpen));
+    });
+
+    panelLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        mobilePanel.setAttribute('data-open', 'false');
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    const quoteForm = document.getElementById('quoteForm');
+    quoteForm?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const submitter = quoteForm.querySelector('button[type="submit"]');
+      const originalText = submitter.textContent;
+      submitter.textContent = 'Quote Request Received';
+      submitter.disabled = true;
+      setTimeout(() => {
+        submitter.textContent = originalText;
+        submitter.disabled = false;
+      }, 2200);
+      alert('Demo only: connect this form to your email, CRM, or form handler before launch.');
+    });
+  </script>
+</body>
+
+</html>
